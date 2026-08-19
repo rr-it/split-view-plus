@@ -33,7 +33,7 @@ document.addEventListener(
 
     //console.log("Clicked URL:", a.href);
 
-    const url = a.href;
+    const url = a.getAttribute('href');
     if (ignoreHref(url)) return;
 
     // IMPORTANT: stop the default navigation immediately (sync),
