@@ -33,8 +33,12 @@ document.addEventListener(
 
     //console.log("Clicked URL:", a.href);
 
-    const url = a.getAttribute('href');
-    if (ignoreHref(url)) return;
+    // Href value as provided by anchor tag
+    const href = a.getAttribute('href');
+    if (ignoreHref(href)) return;
+
+    // Full url including hostname
+    const url = a.href;
 
     // IMPORTANT: stop the default navigation immediately (sync),
     // otherwise the current tab will navigate before our async reply arrives.
